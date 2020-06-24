@@ -6,7 +6,7 @@ const fs = require("fs");
 
 //Declaring a const name app with a value of express function
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
